@@ -1,0 +1,30 @@
+{
+  "name": "allin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValentinAlexandrovGeorgiev/Allin.git"
+  },
+  "author": "Valentin Georgiev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ValentinAlexandrovGeorgiev/Allin/issues"
+  },
+  "homepage": "https://github.com/ValentinAlexandrovGeorgiev/Allin#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "socket.io": "^1.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "engines": {
+    "node": "^0.12.7"
+  }
+}
