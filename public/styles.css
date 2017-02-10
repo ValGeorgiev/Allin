@@ -11,6 +11,11 @@
 body,html {
   background: #e5e5e5;
   overflow: hidden;
+  height: 100%;
+}
+
+input, textarea {
+  outline: none;
 }
 
 #main-title {
@@ -36,6 +41,7 @@ body,html {
   text-align: center;
   width: 100%;
   display: inline-block;
+  margin-bottom: 2px;
 }
 
 .nav-tab.middle {
@@ -49,4 +55,44 @@ body,html {
 
 .nav-tab.selected, .nav-tab:hover {
   border-bottom: 2px solid #93B9FB;
+  margin-bottom: 0;
+}
+
+.scheduler-title {
+  text-align: center;
+}
+
+.time-container {
+  height: 60px;
+  line-height: 60px;
+  margin: 10px 20px;
+  border: 1px solid #C2E0FE;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.time-container:hover {
+  -webkit-box-shadow: 1px 0px 20px 1px rgba(148,145,148,1);
+  -moz-box-shadow: 1px 0px 20px 1px rgba(148,145,148,1);
+  box-shadow: 1px 0px 20px 1px rgba(148,145,148,1);
+}
+
+.timing {
+
+}
+
+.textTime {
+  height: 45px;
+  margin: 5px 20px 10px 10px;
+  border-radius: 5px;
+  padding: 5px 12px 5px 5px;
+  line-height: 45px;
+  font-size: 30px;
+  width: 90%;
+  background-color: #C2E0FE;
+  border: 0;
+}
+
+.hide {
+  display: none;
 }
