@@ -1,29 +1,40 @@
-var express = require('express');
-var app = express();
-var http = require('http').Server(app);
+// server.js
 
-var port = process.env.PORT || 4568;
+var express = require('express'),
+	path = require('path'),
+	app = express(),
+	morgan = require('morgan'),
+	mongoose = require('mongoose'),
+	config = require('./config.js'),
+	bodyParser = require('body-parser'),
+	jsx = require('node-jsx');
 
+// Make sure to include the JSX transpiler
+jsx.install();
 
-var io = require('socket.io')(http);
+// Include static assets. Not advised for production
+app.use(express.static(path.join(__dirname, 'public')));
+// Set view path
+app.set('views', path.join(__dirname, 'views'));
+// set up ejs for templating. You can use whatever
+app.set('view engine', 'ejs');
 
-app.get('/', function(req, res) {
-	res.sendFile(__dirname + '/public/index.html');
+app.use(morgan('dev'));
+
+// Set up Routes for the application
+require('./app/routes/core-routes.js')(app);
+
+//Route not found -- Set 404
+app.get('*', function(req, res) {
+    res.json({
+        'route': 'Sorry this page does not exist!'
+    });
 });
 
-io.on('connection', function (socket) {
-	console.log('a user connected');
-
-	socket.on('disconnect', function() {
-		console.log('user disconnected');
-	});
-
-	socket.on('chat message', function(msg) {
-		console.log('message: ' + msg);
-		io.emit('chat message', msg);
-	});
-});
-
-http.listen(port, function() {
-	console.log('App is listening on port ' + port);
+app.listen(config.port, function(err) {
+	if ( err ) {
+		console.error(error);
+	} else {
+		console.log('Server is running on ' + config.port);
+	}
 });

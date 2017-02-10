@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>All In</title>
+    <link rel="stylesheet" type="text/css" href="/lib/flexboxgrid.css">
+
+    <link href='/styles.css' rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 id="main-title">All In</h1>
+      </div>    
+    </div>
+
+    <div class="row nav">
+      <div class="col-xs-3">
+        <a class="nav-tab" href="#">Scheduler</a>
+      </div>    
+      <div class="col-xs-3">
+        <a class="nav-tab middle" href="#">Days</a>
+      </div>    
+      <div class="col-xs-3">
+        <a class="nav-tab right" href="#">Week</a>
+      </div>    
+      <div class="col-xs-3">
+        <a class="nav-tab" href="#">Year</a>
+      </div>    
+    </div>
+
+    <div id="react-main-mount">
+      <%- reactOutput %>
+    </div>
+
+	<!-- comment out main.js to see server side only rendering -->
+	<script src="/main.js"></script>
+
+  </body>
+</html>

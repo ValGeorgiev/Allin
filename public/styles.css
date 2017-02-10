@@ -1,0 +1,52 @@
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body,html {
+  background: #e5e5e5;
+  overflow: hidden;
+}
+
+#main-title {
+    text-align: center;
+    height: 55px;
+    line-height: 55px;
+    color: #033DA0;
+    font-size: 40px;
+}
+
+.nav {
+  margin: 20px 0;
+}
+
+.nav .col-xs-3 {
+  padding: 0;
+}
+
+.nav-tab {
+  text-decoration: none;
+  color: #2F7AF9;
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+
+.nav-tab.middle {
+  border-left: 1px solid #93B9FB;
+  border-right: 1px solid #93B9FB;
+}
+
+.nav-tab.right {
+  border-right: 1px solid #93B9FB;
+}
+
+.nav-tab.selected, .nav-tab:hover {
+  border-bottom: 2px solid #93B9FB;
+}

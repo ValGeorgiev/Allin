@@ -1,30 +1,38 @@
 {
-  "name": "allin",
+  "name": "all_in",
   "version": "1.0.0",
-  "description": "",
+  "description": "There is a push to change the word [Isomorphic to Universal](https://medium.com/@mjackson/universal-javascript-4761051b7ae9). Whatever floats your boat!",
   "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^0.8.8",
+    "express": "^4.14.1",
+    "gulp": "^3.8.11",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.4.3",
+    "mongoose": "^4.8.1",
+    "morgan": "^1.7.0",
+    "node-jsx": "^0.2.1",
+    "path": "^0.12.7",
+    "react": "^0.12.2",
+    "react-tools": "^0.12.2",
+    "reactify": "^0.15.2"
+  },
+  "devDependencies": {
+    "browserify": "^14.0.0",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.1",
+    "node-jsx": "^0.2.1",
+    "nodemon": "^1.11.0",
+    "react-tools": "^0.12.2",
+    "reactify": "^0.15.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ValentinAlexandrovGeorgiev/Allin.git"
-  },
   "author": "Valentin Georgiev",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ValentinAlexandrovGeorgiev/Allin/issues"
-  },
-  "homepage": "https://github.com/ValentinAlexandrovGeorgiev/Allin#readme",
-  "dependencies": {
-    "express": "^4.14.0",
-    "socket.io": "^1.7.2"
-  },
-  "devDependencies": {
-    "nodemon": "^1.11.0"
-  },
-  "engines": {
-    "node": "^0.12.7"
-  }
+  "license": "MIT"
 }
