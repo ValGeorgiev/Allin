@@ -22,7 +22,8 @@ app.set('view engine', 'ejs');
 app.use(morgan('dev'));
 
 // Set up Routes for the application
-require('./app/routes/core-routes.js')(app);
+require('./app/routes/SchedulerRouter.js')(app);
+require('./app/routes/DayRouter.js')(app);
 
 //Route not found -- Set 404
 app.get('*', function(req, res) {

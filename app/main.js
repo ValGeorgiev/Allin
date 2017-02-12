@@ -2,8 +2,8 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var ReactScheduler = require('./components/ReactScheduler');
+var ReactHeader = require('./components/ReactHeader');
 
-var mountNode = document.getElementById('react-main-mount');
+var mountNode = document.getElementById('react-header');
 
-ReactDOM.render(<ReactScheduler />, mountNode);
+ReactDOM.render(<ReactHeader />, mountNode);
