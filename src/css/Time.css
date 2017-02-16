@@ -1,0 +1,129 @@
+.hide {
+	display: none;
+}
+
+.time-wrapper {
+	position: relative;
+}
+
+.time-container {
+	height: 60px;
+	line-height: 60px;
+	margin: 10px 20px;
+	border: 1px solid #C2E0FE;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.time-container:hover {
+	-webkit-box-shadow: 1px 0px 20px 1px rgba(148,145,148,1);
+	-moz-box-shadow: 1px 0px 20px 1px rgba(148,145,148,1);
+	box-shadow: 1px 0px 20px 1px rgba(148,145,148,1);
+}
+
+.timing {
+	margin-left: 25px;
+	font-size: 16px;
+}
+
+.time-text {
+	color: #033DA0;
+	font-size: 20px;
+	display: inline-block;
+    margin: 0;
+    margin-left: 49px;
+    max-height: 50px;
+    width: 900px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+}
+
+.textTime:not(.hide) {
+	top: -1px;
+	right: 35px;
+}
+
+.textTime {
+	position: absolute;
+	height: 44px;
+	margin: 9px 20px 10px 10px;
+	border-radius: 5px;
+	padding: 5px 12px 5px 5px;
+	line-height: 45px;
+	font-size: 30px;
+	width: 80%;
+	background-color: #C2E0FE;
+	border: 0;
+}
+
+.modal {
+	text-align: center;
+	position: fixed;
+	background: #FAFAFA;
+	height: 400px;
+	width: 500px;
+	top: 50%;
+	left: 50%;
+	margin-top: -200px;
+	margin-left: -250px;
+	z-index: 9999;
+	border-radius: 10px;
+}
+
+.modal-background {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	content: '';
+	z-index: 9998;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal h2 {
+	color: #033DA0;
+	margin-top: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #C2E0FE;
+	margin-bottom: 20px;
+}
+
+.modal .edit-text {
+	margin: 20px 25px;
+	width: 450px;
+	height: 175px;
+	resize: none;
+	border-radius: 7px;
+	padding: 5px 10px;
+	font-size: 19px;
+}
+
+.edit-button {
+	width: 100px;
+	height: 40px;
+	font-size: 18px;
+	border-radius: 5px;
+	border: 0;
+	background-color: #2F7AF9;
+	color: white;
+	-webkit-box-shadow: 1px 0px 10px 1px rgba(148,145,148,1);
+	-moz-box-shadow: 1px 0px 10px 1px rgba(148,145,148,1);
+	box-shadow: 1px 0px 10px 1px rgba(148,145,148,1);
+	margin-right: -70px;
+	cursor: pointer;
+
+}
+
+.delete-button {
+	border: 0;
+	border-bottom: 2px solid red;
+	background: transparent;
+	color: red;
+	float: right;
+	margin-right: 70px;
+	margin-top: 12px;
+	font-size: 16px;
+	cursor: pointer;
+}

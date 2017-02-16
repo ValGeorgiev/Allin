@@ -7,30 +7,35 @@ var express = require('express'),
 	mongoose = require('mongoose'),
 	config = require('./config.js'),
 	bodyParser = require('body-parser'),
-	jsx = require('node-jsx');
+	cors = require('cors');
 
-// Make sure to include the JSX transpiler
-jsx.install();
 
-// Include static assets. Not advised for production
-app.use(express.static(path.join(__dirname, 'public')));
-// Set view path
-app.set('views', path.join(__dirname, 'views'));
-// set up ejs for templating. You can use whatever
-app.set('view engine', 'ejs');
+mongoose.connect(config.database, function(err){
+    if (err) {
+        console.log(err);
+    } else {
+        console.log('Connected to the database');
+    }
+});
 
 app.use(morgan('dev'));
 
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ 
+	extended: false 
+}));
+
+// parse application/json
+app.use(bodyParser.json());
+
+app.use(cors({
+	origin: 'http://localhost:3000'
+}));
+
 // Set up Routes for the application
 require('./app/routes/SchedulerRouter.js')(app);
-require('./app/routes/DayRouter.js')(app);
+require('./app/routes/PeriodRouter.js')(app);
 
-//Route not found -- Set 404
-app.get('*', function(req, res) {
-    res.json({
-        'route': 'Sorry this page does not exist!'
-    });
-});
 
 app.listen(config.port, function(err) {
 	if ( err ) {

@@ -1,4 +1,0 @@
-Malibu : #93B9FB			Border nav tabs
-Dodger Blue : #2F7AF9		Nav tabs
-Smalt : #033DA0				All in
-French Pass: #C2E0FE		Time border
