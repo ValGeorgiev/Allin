@@ -1,5 +1,9 @@
 All In
 
+Reorder your life with AllIn
+
+
+
 Start the application: 
 git clone / npm install / npm start 
 
